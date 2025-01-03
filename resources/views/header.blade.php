@@ -53,10 +53,17 @@
                 <li>  
                     {{-- <a href="{{ route('doctors.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Konsultasi</a>   --}}
                 </li> 
-            @if (Route::has('login'))
+                @if (Route::has('login'))
                 @auth
+                    @php
+                        $dashboardRoute = match(auth()->user()->role) {
+                            'admin' => 'admin/dashboard',
+                            'doktor' => 'doktor/dashboard',
+                            'user' => 'user/dashboard',
+                        };
+                    @endphp
                     <a
-                        href="{{ url('/dashboard') }}"
+                        href="{{ url($dashboardRoute) }}"
                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:text-blue-500">
                         Dashboard
                     </a>
@@ -69,13 +76,13 @@
                     @if (Route::has('register'))
                         <a
                             href="{{ route('register') }}"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:text-blue-500"
-                        >
-                        Daftar
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:text-blue-500">
+                            Daftar
                         </a>
                     @endif
                 @endauth
             @endif
+            
                             
                                 
             </ul>

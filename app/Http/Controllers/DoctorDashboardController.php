@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class DoctorDashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    
     public function index()
     {
-        return view('admin.index');
+        return view('doctor.dashboard');
     }
 
     /**
