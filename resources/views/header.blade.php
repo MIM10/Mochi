@@ -58,7 +58,7 @@
                     @php
                         $dashboardRoute = match(auth()->user()->role) {
                             'admin' => 'admin/dashboard',
-                            'doktor' => 'doktor/dashboard',
+                            'doctor' => 'doctor/dashboard',
                             'user' => 'user/dashboard',
                         };
                     @endphp
