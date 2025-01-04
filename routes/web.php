@@ -45,7 +45,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 Route::middleware(['auth', 'role:doctor'])->group(function () {
     Route::get('/doctor/dashboard', [DoctorDashboardController::class, 'index'])->name('doctor.dashboard');
     Route::get('/doctor/patient-report', [PatientReportController::class, 'index'])->name('doctor.patient-report');
-    Route::get('/doctor/patient-report', [DoctorDataController::class, 'index'])->name('doctor.doctor-data');
+    // Route::get('/doctor/patient-report', [DoctorDataController::class, 'index'])->name('doctor.doctor-data');
 });
 
 // routes/user.php
