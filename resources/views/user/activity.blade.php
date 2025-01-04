@@ -345,5 +345,5 @@
 
         <!-- card 2 -->
 
-@include('profile.footer')        
+@include('user.footer')        
 

@@ -17,8 +17,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="{{ asset('img/Logo MoChi.png') }}" />
     <title>Dashboard Dokter MoChi</title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -545,12 +545,15 @@
     </main>
   </body>
   <!-- plugin for charts  -->
-  <script src="../assets/js/plugins/chartjs.min.js" async></script>
-  <script src="../assets/js/chart.js" async></script>
+  <script src="{{ asset('js/plugins/chartjs.min.js') }}" async></script>
+  <script src="{{ asset('js/chart-1.js') }}" async></script>
+  <script src="{{ asset('js/chart-2.js') }}" async></script>
+  <script src="{{ asset('js/chart-3.js') }}" async></script>
+  <script src="{{ asset('js/chart.js') }}" async></script>
   <!-- plugin for scrollbar  -->
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js" async></script>
+  <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}" async></script>
   <!-- github button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- main script file  -->
-  <script src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
+  <script src="{{ asset('js/soft-ui-dashboard-tailwind.js?v=1.0.5') }}" async></script>
 </html>
