@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Doctor\PatientReportController;
 use App\Http\Controllers\DoctorDashboardController;
 use App\Http\Controllers\UserDashboardController;
 use Illuminate\Support\Facades\Auth;
@@ -43,6 +44,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 // routes/doctor.php
 Route::middleware(['auth', 'role:doctor'])->group(function () {
     Route::get('/doctor/dashboard', [DoctorDashboardController::class, 'index'])->name('doctor.dashboard');
+    Route::get('/doctor/patient-report', [PatientReportController::class, 'index'])->name('doctor.patient-report');
+    Route::get('/doctor/patient-report', [DoctorDataController::class, 'index'])->name('doctor.doctor-data');
 });
 
 // routes/user.php
