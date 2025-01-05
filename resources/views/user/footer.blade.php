@@ -73,7 +73,7 @@
 <script src="{{ asset('assets/js/chart-1.js') }}"></script>
 <script src="{{ asset('assets/js/chart-3.js') }}"></script>
 <!-- plugin for scrollbar  -->
-<script src="{{ asset('./assets/js/plugins/perfect-scrollbar.min.js') }}" async></script>
+<script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}" async></script>
 <!-- github button -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
